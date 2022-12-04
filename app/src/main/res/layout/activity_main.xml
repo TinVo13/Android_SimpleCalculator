@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:theme="@style/Theme.SimpleCalculator">
+
+    <TextView
+        android:id="@+id/tv_pheptinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phép tính"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:focusable="true"
+        android:textAlignment="textEnd"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"/>
+    <TextView
+        android:id="@+id/et_ketqua"
+        android:layout_below="@id/tv_pheptinh"
+        android:textAlignment="textEnd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Kết quả"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginHorizontal="20dp"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"/>
+    <LinearLayout
+        android:background="@color/material_dynamic_neutral_variant80"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/xoahet"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="C"
+                android:textColor="#3F51B5"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/phantram"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="%"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/xoa"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="Xóa"
+                android:textColor="#F44336"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/chia"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="÷"
+                android:textColor="#009688"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/bay"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="7"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/tam"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="8"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/chin"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="9"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/nhan"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="×"
+                android:textColor="#009688"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/bon"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="4"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/nam"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="5"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/sau"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="6"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/tru"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="-"
+                android:textColor="#009688"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/mot"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="1"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/hai"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="2"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/ba"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="3"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/cong"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="+"
+                android:textColor="#009688"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btn00"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="00"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="0"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/phay"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="."
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/bang"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="5dp"
+                android:backgroundTint="@color/purple_200"
+                android:background="@drawable/bg_button"
+                android:onClick="onClick"
+                android:text="="
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
